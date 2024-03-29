@@ -921,26 +921,21 @@ SMT: TL3301SPF100QG, TL3301SPF160QG...</description>
 </library>
 <library name="BASTL_TRANZISTORS" urn="urn:adsk.eagle:library:32975847">
 <packages>
-<package name="TO92_ROUND" urn="urn:adsk.eagle:footprint:43822006/1" library_version="19">
-<wire x1="-2.0946" y1="-1.651" x2="-2.6549" y2="-0.254" width="0.127" layer="21" curve="-32.781"/>
-<wire x1="-2.6549" y1="-0.254" x2="-0.7863" y2="2.5485" width="0.127" layer="21" curve="-78.3185"/>
-<wire x1="0.7863" y1="2.5484" x2="2.0945" y2="-1.651" width="0.127" layer="21" curve="-111.1"/>
-<wire x1="-2.0945" y1="-1.651" x2="2.0945" y2="-1.651" width="0.127" layer="21"/>
-<wire x1="-2.2537" y1="-0.254" x2="-0.2863" y2="-0.254" width="0.127" layer="51"/>
-<wire x1="-2.6549" y1="-0.254" x2="-2.2537" y2="-0.254" width="0.127" layer="21"/>
-<wire x1="-0.2863" y1="-0.254" x2="0.2863" y2="-0.254" width="0.127" layer="21"/>
-<wire x1="2.2537" y1="-0.254" x2="2.6549" y2="-0.254" width="0.127" layer="21"/>
-<wire x1="0.2863" y1="-0.254" x2="2.2537" y2="-0.254" width="0.127" layer="51"/>
-<wire x1="-0.7863" y1="2.5485" x2="0.7863" y2="2.5485" width="0.127" layer="51" curve="-34.2936"/>
+<package name="TO92_ROUND" urn="urn:adsk.eagle:footprint:43822006/2" library_version="20">
+<wire x1="-2.0946" y1="-1.1938" x2="-2.6549" y2="0.2032" width="0.2" layer="21" curve="-32.781"/>
+<wire x1="-2.6549" y1="0.2032" x2="-0.7863" y2="3.0057" width="0.2" layer="21" curve="-78.3185"/>
+<wire x1="0.7863" y1="3.0056" x2="2.0945" y2="-1.1938" width="0.2" layer="21" curve="-111.1"/>
+<wire x1="-2.0945" y1="-1.1938" x2="2.0945" y2="-1.1938" width="0.2" layer="21"/>
+<wire x1="-0.7863" y1="3.0057" x2="0.7863" y2="3.0057" width="0.2" layer="51" curve="-34.2936"/>
 <pad name="1" x="1.27" y="0" drill="0.8128" diameter="1.4224"/>
 <pad name="2" x="0" y="1.905" drill="0.8128" diameter="1.4224"/>
 <pad name="3" x="-1.27" y="0" drill="0.8128" diameter="1.4224"/>
-<text x="0" y="-2.54" size="0.8" layer="25" font="fixed" ratio="15" rot="R180" align="center">&gt;NAME</text>
+<text x="0" y="-1.905" size="0.8" layer="25" font="fixed" ratio="15" rot="R180" align="center">&gt;NAME</text>
 <text x="0" y="3.81" size="0.8" layer="27" font="fixed" ratio="15" align="center">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
-<package3d name="TO92_ROUND" urn="urn:adsk.eagle:package:43822007/1" type="box" library_version="19">
+<package3d name="TO92_ROUND" urn="urn:adsk.eagle:package:43822007/2" type="box" library_version="20">
 <packageinstances>
 <packageinstance name="TO92_ROUND"/>
 </packageinstances>
@@ -967,7 +962,7 @@ SMT: TL3301SPF100QG, TL3301SPF160QG...</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BC547" urn="urn:adsk.eagle:component:43822008/1" library_version="19">
+<deviceset name="BC547" urn="urn:adsk.eagle:component:43822008/2" library_version="20">
 <gates>
 <gate name="G$1" symbol="NPN" x="0" y="0"/>
 </gates>
@@ -979,7 +974,7 @@ SMT: TL3301SPF100QG, TL3301SPF160QG...</description>
 <connect gate="G$1" pin="E" pad="1"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:43822007/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:43822007/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1019,25 +1014,25 @@ type 0204, grid 7.5 mm</description>
 <text x="-0.127" y="1.5494" size="0.8" layer="25" ratio="15" align="center">&gt;NAME</text>
 <text x="0" y="0" size="0.8" layer="27" ratio="15" align="center">&gt;VALUE</text>
 </package>
-<package name="RCL_0204/7_ROUND" urn="urn:adsk.eagle:footprint:43822011/1" library_version="7">
+<package name="RCL_0204/7_ROUND" urn="urn:adsk.eagle:footprint:43822011/2" library_version="8">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 type 0204, grid 7.5 mm</description>
-<wire x1="-2.54" y1="0.762" x2="-2.286" y2="1.016" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-2.54" y1="-0.762" x2="-2.286" y2="-1.016" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.286" y1="-1.016" x2="2.54" y2="-0.762" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.286" y1="1.016" x2="2.54" y2="0.762" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-2.286" y1="1.016" x2="-1.905" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="0.889" x2="-1.905" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="-2.286" y1="-1.016" x2="-1.905" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="-0.889" x2="-1.905" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="1.778" y1="0.889" x2="1.905" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="1.778" y1="0.889" x2="-1.778" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="1.778" y1="-0.889" x2="1.905" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="1.778" y1="-0.889" x2="-1.778" y2="-0.889" width="0.1524" layer="21"/>
-<wire x1="2.286" y1="1.016" x2="1.905" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="2.286" y1="-1.016" x2="1.905" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="-0.762" x2="2.54" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.762" x2="-2.286" y2="1.016" width="0.2" layer="21" curve="-90"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.286" y2="-1.016" width="0.2" layer="21" curve="90"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="-0.762" width="0.2" layer="21" curve="90"/>
+<wire x1="2.286" y1="1.016" x2="2.54" y2="0.762" width="0.2" layer="21" curve="-90"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0.762" width="0.2" layer="21"/>
+<wire x1="-2.286" y1="1.016" x2="-1.905" y2="1.016" width="0.2" layer="21"/>
+<wire x1="-1.778" y1="0.889" x2="-1.905" y2="1.016" width="0.2" layer="21"/>
+<wire x1="-2.286" y1="-1.016" x2="-1.905" y2="-1.016" width="0.2" layer="21"/>
+<wire x1="-1.778" y1="-0.889" x2="-1.905" y2="-1.016" width="0.2" layer="21"/>
+<wire x1="1.778" y1="0.889" x2="1.905" y2="1.016" width="0.2" layer="21"/>
+<wire x1="1.778" y1="0.889" x2="-1.778" y2="0.889" width="0.2" layer="21"/>
+<wire x1="1.778" y1="-0.889" x2="1.905" y2="-1.016" width="0.2" layer="21"/>
+<wire x1="1.778" y1="-0.889" x2="-1.778" y2="-0.889" width="0.2" layer="21"/>
+<wire x1="2.286" y1="1.016" x2="1.905" y2="1.016" width="0.2" layer="21"/>
+<wire x1="2.286" y1="-1.016" x2="1.905" y2="-1.016" width="0.2" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="2.54" y2="0.762" width="0.2" layer="21"/>
 <pad name="1" x="-3.81" y="0" drill="0.8128" diameter="1.4224"/>
 <pad name="2" x="3.81" y="0" drill="0.8128" diameter="1.4224"/>
 <text x="-0.127" y="1.5494" size="0.8" layer="25" ratio="15" align="center">&gt;NAME</text>
@@ -1052,7 +1047,7 @@ type 0204, grid 7.5 mm</description>
 <packageinstance name="RCL_0204/7"/>
 </packageinstances>
 </package3d>
-<package3d name="RCL_0204/7_ROUND" urn="urn:adsk.eagle:package:43822012/1" type="box" library_version="7">
+<package3d name="RCL_0204/7_ROUND" urn="urn:adsk.eagle:package:43822012/2" type="box" library_version="8">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 type 0204, grid 7.5 mm</description>
 <packageinstances>
@@ -1073,7 +1068,7 @@ type 0204, grid 7.5 mm</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="RESISTOR_0207_THT" urn="urn:adsk.eagle:component:32975938/3" prefix="R" uservalue="yes" library_version="7">
+<deviceset name="RESISTOR_0207_THT" urn="urn:adsk.eagle:component:32975938/4" prefix="R" uservalue="yes" library_version="8">
 <description>&lt;B&gt;RESISTOR&lt;/B&gt;, European symbol</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
@@ -1099,7 +1094,7 @@ type 0204, grid 7.5 mm</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:43822012/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:43822012/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1136,9 +1131,9 @@ type 0204, grid 7.5 mm</description>
 <wire x1="2" y1="1.5" x2="2" y2="-1.5" width="0.1524" layer="21"/>
 <wire x1="2" y1="-1.5" x2="2" y2="1.5" width="0.1524" layer="21" curve="-286.260205"/>
 </package>
-<package name="LED_5MM_NICE" urn="urn:adsk.eagle:footprint:43822023/1" library_version="48">
-<pad name="A" x="-1.27" y="0" drill="0.7" diameter="1.143"/>
-<pad name="K" x="1.27" y="0" drill="0.7" diameter="1.143"/>
+<package name="LED_5MM_NICE" urn="urn:adsk.eagle:footprint:43822023/2" library_version="49">
+<pad name="A" x="-1.27" y="0" drill="0.7" diameter="1.4224"/>
+<pad name="K" x="1.27" y="0" drill="0.7" diameter="1.4224"/>
 <text x="0" y="4.056" size="0.8" layer="25" font="fixed" ratio="15" align="center">&gt;NAME</text>
 <circle x="0" y="0" radius="2.501" width="0.1016" layer="253"/>
 <circle x="0" y="0" radius="2.5" width="0.2" layer="21"/>
@@ -1157,7 +1152,7 @@ type 0204, grid 7.5 mm</description>
 <packageinstance name="LED_5MM"/>
 </packageinstances>
 </package3d>
-<package3d name="LED_5MM_NICE" urn="urn:adsk.eagle:package:43822024/1" type="box" library_version="48">
+<package3d name="LED_5MM_NICE" urn="urn:adsk.eagle:package:43822024/2" type="box" library_version="49">
 <packageinstances>
 <packageinstance name="LED_5MM_NICE"/>
 </packageinstances>
@@ -1189,7 +1184,7 @@ type 0204, grid 7.5 mm</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED_THT" urn="urn:adsk.eagle:component:32977722/6" prefix="LD" uservalue="yes" library_version="48">
+<deviceset name="LED_THT" urn="urn:adsk.eagle:component:32977722/7" prefix="LD" uservalue="yes" library_version="49">
 <description>[color]_[diameter]_[difused/clear]
 
 
@@ -1244,7 +1239,7 @@ R_3mm_D</description>
 <connect gate="G$1" pin="C" pad="K"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:43822024/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:43822024/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1375,40 +1370,40 @@ grid 5 mm, outline 2.4 x 4.4 mm</description>
 <part name="IC1" library="BASTL_ICS" library_urn="urn:adsk.eagle:library:32977748" deviceset="ATTINY85" device="-20PU" package3d_urn="urn:adsk.eagle:package:16409/2"/>
 <part name="S1" library="BASTL_SWITCHES" library_urn="urn:adsk.eagle:library:32903743" deviceset="PUSH_MOMENTARY" device="_THT_6X6MM" package3d_urn="urn:adsk.eagle:package:32903802/2"/>
 <part name="GND1" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
-<part name="Q1" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/1"/>
-<part name="Q2" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/1"/>
-<part name="Q3" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/1"/>
-<part name="R1" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10k"/>
-<part name="R2" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10k"/>
-<part name="R3" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10k"/>
-<part name="Q4" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/1"/>
-<part name="R4" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10k"/>
+<part name="Q1" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/2"/>
+<part name="Q2" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/2"/>
+<part name="Q3" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/2"/>
+<part name="R1" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10k"/>
+<part name="R2" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10k"/>
+<part name="R3" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10k"/>
+<part name="Q4" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/2"/>
+<part name="R4" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10k"/>
 <part name="GND2" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="GND3" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="GND4" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="GND5" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
-<part name="R5" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10"/>
-<part name="R6" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10"/>
-<part name="R7" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10"/>
-<part name="R8" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/1" value="10"/>
+<part name="R5" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10"/>
+<part name="R6" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10"/>
+<part name="R7" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10"/>
+<part name="R8" library="BASTL_RESISTORS" library_urn="urn:adsk.eagle:library:32975925" deviceset="RESISTOR_0207_THT" device="0204/7_ROUND" package3d_urn="urn:adsk.eagle:package:43822012/2" value="10"/>
 <part name="GND6" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="VDD" device=""/>
-<part name="LD1" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD2" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD3" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD4" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD5" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD6" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD7" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD8" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD9" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD10" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD11" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD12" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD13" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD14" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD15" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
-<part name="LD16" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/1"/>
+<part name="LD1" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD2" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD3" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD4" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD5" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD6" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD7" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD8" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD9" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD10" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD11" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD12" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD13" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD14" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD15" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
+<part name="LD16" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/2"/>
 <part name="SUPPLY2" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="VDD" device=""/>
 <part name="C1" library="BASTL_CAPACITORS" library_urn="urn:adsk.eagle:library:32978038" deviceset="CAPACITOR_THT" device="_2.54" package3d_urn="urn:adsk.eagle:package:43822030/1" value="100n"/>
 </parts>
