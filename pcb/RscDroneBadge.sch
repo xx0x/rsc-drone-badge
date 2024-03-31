@@ -1635,8 +1635,8 @@ BH-25F-1</description>
 </class>
 </classes>
 <parts>
-<part name="IC1" library="BASTL_ICS" library_urn="urn:adsk.eagle:library:32977748" deviceset="ATTINY85" device="-20PU" package3d_urn="urn:adsk.eagle:package:43822317/1"/>
-<part name="S1" library="BASTL_SWITCHES" library_urn="urn:adsk.eagle:library:32903743" deviceset="PUSH_MOMENTARY" device="_THT_6X6MM" package3d_urn="urn:adsk.eagle:package:32903802/2"/>
+<part name="IC1" library="BASTL_ICS" library_urn="urn:adsk.eagle:library:32977748" deviceset="ATTINY85" device="-20PU" package3d_urn="urn:adsk.eagle:package:43822317/1" value="ATTINY85"/>
+<part name="S1" library="BASTL_SWITCHES" library_urn="urn:adsk.eagle:library:32903743" deviceset="PUSH_MOMENTARY" device="_THT_6X6MM" package3d_urn="urn:adsk.eagle:package:32903802/2" value="6x6mm BUTTON"/>
 <part name="GND1" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="Q1" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/4"/>
 <part name="Q2" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/4"/>
@@ -1674,7 +1674,7 @@ BH-25F-1</description>
 <part name="LD16" library="BASTL_LEDS" library_urn="urn:adsk.eagle:library:32977677" deviceset="LED_THT" device="-5MM_NICE" package3d_urn="urn:adsk.eagle:package:43822024/3"/>
 <part name="SUPPLY2" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="VDD" device=""/>
 <part name="C1" library="BASTL_CAPACITORS" library_urn="urn:adsk.eagle:library:32978038" deviceset="CAPACITOR_THT" device="_2.54" package3d_urn="urn:adsk.eagle:package:43822030/2" value="100n"/>
-<part name="BAT" library="BASTL_BATHOLDER" library_urn="urn:adsk.eagle:library:32978091" deviceset="CR2032_PLASTIC" device="" package3d_urn="urn:adsk.eagle:package:43822280/2"/>
+<part name="BAT" library="BASTL_BATHOLDER" library_urn="urn:adsk.eagle:library:32978091" deviceset="CR2032_PLASTIC" device="" package3d_urn="urn:adsk.eagle:package:43822280/2" value="CR2032 HOLDER"/>
 <part name="SUPPLY3" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="VDD" device=""/>
 <part name="GND7" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="ISP" library="BASTL_CONNECTORS" library_urn="urn:adsk.eagle:library:32904192" deviceset="2X3POGO" device="NO_VIA" package3d_urn="urn:adsk.eagle:package:32904263/1"/>
