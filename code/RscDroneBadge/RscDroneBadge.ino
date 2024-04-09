@@ -4,14 +4,14 @@
  * Using: ATTinyCore
  *
  * TODO: Cleanup. The code is a little bit ugly, but it works somehow.
- */ 
+ */
 
 #include <avr/interrupt.h>
 #include <avr/sleep.h>
 
 
 #define LEDS 4
-uint8_t ledPins[LEDS] = { 0, 1, 2, 3 };
+uint8_t ledPins[LEDS] = { 0, 1, 3, 2 };
 
 #define ON HIGH
 #define OFF LOW
@@ -25,11 +25,11 @@ uint8_t ledPins[LEDS] = { 0, 1, 2, 3 };
 /*
  * Animations
  */
-byte animationType = 0;        // current animation
-unsigned int animationInterval = 250;   // interval between animation frames
-byte animationFrame = 0;       // current animation frame
-unsigned long lastTime = 0;    // last time in milliseconds the frame changed
-byte animationEnabled = true;  // whether animations enabled
+byte animationType = 0;                // current animation
+unsigned int animationInterval = 250;  // interval between animation frames
+byte animationFrame = 0;               // current animation frame
+unsigned long lastTime = 0;            // last time in milliseconds the frame changed
+byte animationEnabled = true;          // whether animations enabled
 
 
 /*
@@ -47,7 +47,7 @@ bool modeChangeDisabled = false;   // if changing pwm or turning on, mode change
 
 bool leds[LEDS] = { 0, 0, 0, 0 };
 
-#define ANIMATIONS 6  // animations count
+#define ANIMATIONS 8  // animations count
 
 void animate() {
 
@@ -61,16 +61,23 @@ void animate() {
       animationAllBlink();
       break;
     case 2:
-      animationRotate();
+      animationRotateProper();
       break;
     case 3:
       animationInterval = INTERVAL_FAST;
-      animationRotate();
+      animationRotateProper();
       break;
     case 4:
-      animationRotateBackwards();
+      animationRotate();
       break;
     case 5:
+      animationInterval = INTERVAL_FAST;
+      animationRotate();
+      break;
+    case 6:
+      animationRotateBackwards();
+      break;
+    case 7:
       animationInterval = INTERVAL_FAST;
       animationRotateBackwards();
       break;
@@ -112,6 +119,13 @@ void animationRotateBackwards() {
   animationFrame = (animationFrame + 1) % LEDS;
   animationOff();
   leds[LEDS - animationFrame - 1] = 1;
+}
+
+void animationRotateProper() {
+  animationFrame = (animationFrame + 1) % 2;
+  animationOff();
+  leds[animationFrame] = 1;
+  leds[animationFrame + 2] = 1;
 }
 
 void animationRandom() {
