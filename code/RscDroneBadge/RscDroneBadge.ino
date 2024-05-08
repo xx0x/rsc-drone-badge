@@ -1,9 +1,9 @@
 /**
  * Code for RSC DRONE BADGE
- * MCU: ATTINY85 @ 8 MHz
+ * MCU: ATTINY25 @ 8 MHz
  * Using: ATTinyCore
  *
- * TODO: Cleanup. The code is a little bit ugly, but it works somehow.
+ * UGLY CODE, SORRY :((
  */
 
 #include <avr/interrupt.h>
@@ -41,7 +41,7 @@ byte animationEnabled = true;          // whether animations enabled
  */
 #define PWM_MODES 4
 byte currentPwmMode = 0;
-byte pwmModes[PWM_MODES] = { 0, 10, 100, 250 };
+byte pwmModes[PWM_MODES] = { 0, 10, 50, 250 };
 byte pwmIndex = 0;
 
 
@@ -60,13 +60,30 @@ bool modeChangeDisabled = false;   // if changing pwm or turning on, mode change
 
 bool leds[LEDS] = { 0, 0, 0, 0 };
 
-#define ANIMATIONS 8  // animations count
+#define ANIMATIONS 9  // animations count
+#define ANIMATION_RANDOM 8
+uint8_t randomAnimation = 1;
+uint16_t randomFramesCounter = 0;
 
 void animate() {
 
   animationInterval = INTERVAL_NORMAL;
+  uint8_t animationTypeNow = animationType;
+  if(animationTypeNow == ANIMATION_RANDOM){
+    randomFramesCounter++;
+    if(randomFramesCounter > 8){
+        byte x = 0;
+        do {
+            x = (rand() % 7) + 1;
+        } while(x == randomAnimation);
+        randomAnimation = x;
+        randomFramesCounter = 0;
+        animationFrame = 0;
+    }
+    animationTypeNow = randomAnimation;
+  }
 
-  switch (animationType) {
+  switch (animationTypeNow) {
     case 0:
       animationOn();
       break;
@@ -164,32 +181,34 @@ void setup() {
  */
 void loop() {
 
-  /*
+  // debounce to prevent double taps
+  if (millis() - lastTimeButton > 200) {
+    /*
      * BUTTON MODE switches animations, but after is released (because of PWM and turning off)
      */
-  if (digitalRead(PIN_BUTTON) == BUTTON_PRESSED) {
-    if (!buttonPressed) {
-      buttonPressed = true;
-      lastTimeButton = millis();
-      delay(100);  // little bit of debouncing here and there
-    }
-    checkWhetherToSleep();  // checking whether to sleep
-  } else {
-
-    // if mode released, change mode
-    if (buttonPressed) {
-      if (!modeChangeDisabled) {  // changing modes is disabled after PWM setting and waking up
-        lastTime = 0;
-        animationType = (animationType + 1) % ANIMATIONS;
-        if (animationType == 0) {
-          currentPwmMode = (currentPwmMode + 1) % PWM_MODES;
-        }
-        animationFrame = 0;
+    if (digitalRead(PIN_BUTTON) == BUTTON_PRESSED) {
+      if (!buttonPressed) {
+        buttonPressed = true;
+        lastTimeButton = millis();
       }
-      modeChangeDisabled = false;
+      checkWhetherToSleep();  // checking whether to sleep
+    } else {
+
+      // if mode released, change mode
+      if (buttonPressed) {
+        if (!modeChangeDisabled) {  // changing modes is disabled after waking up
+          lastTime = 0;
+          animationType = (animationType + 1) % ANIMATIONS;
+          if (animationType == 0) {
+            currentPwmMode = (currentPwmMode + 1) % PWM_MODES;
+          }
+          animationFrame = 0;
+        }
+        modeChangeDisabled = false;
+      }
+      buttonPressed = false;
+      lastTimeButton = 0;
     }
-    buttonPressed = false;
-    lastTimeButton = 0;
   }
 
   /*
