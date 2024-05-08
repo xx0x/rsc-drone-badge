@@ -194,6 +194,8 @@ void loop() {
       checkWhetherToSleep();  // checking whether to sleep
     } else {
 
+      lastTimeButton = 0;
+
       // if mode released, change mode
       if (buttonPressed) {
         if (!modeChangeDisabled) {  // changing modes is disabled after waking up
@@ -205,9 +207,9 @@ void loop() {
           animationFrame = 0;
         }
         modeChangeDisabled = false;
+        lastTimeButton = millis();
       }
       buttonPressed = false;
-      lastTimeButton = 0;
     }
   }
 
