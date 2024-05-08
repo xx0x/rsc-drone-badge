@@ -12,6 +12,11 @@
 
 #define LEDS 4
 uint8_t ledPins[LEDS] = { 0, 1, 3, 2 };
+uint8_t ledPinsFast[LEDS] = { PB0, PB1, PB3, PB2 };
+
+#define SET_STATE_HIGH(pin_name) (PORTB |= (1 << pin_name))
+#define SET_STATE_LOW(pin_name) (PORTB &= ~(1 << pin_name))
+#define SET_STATE(pin_name, state) ((state) ? SET_STATE_HIGH(pin_name) : SET_STATE_LOW(pin_name))
 
 #define ON HIGH
 #define OFF LOW
@@ -30,6 +35,14 @@ unsigned int animationInterval = 250;  // interval between animation frames
 byte animationFrame = 0;               // current animation frame
 unsigned long lastTime = 0;            // last time in milliseconds the frame changed
 byte animationEnabled = true;          // whether animations enabled
+
+/*
+ * PWM - brightness settings
+ */
+#define PWM_MODES 4
+byte currentPwmMode = 0;
+byte pwmModes[PWM_MODES] = { 0, 10, 100, 250 };
+byte pwmIndex = 0;
 
 
 /*
@@ -168,6 +181,9 @@ void loop() {
       if (!modeChangeDisabled) {  // changing modes is disabled after PWM setting and waking up
         lastTime = 0;
         animationType = (animationType + 1) % ANIMATIONS;
+        if (animationType == 0) {
+          currentPwmMode = (currentPwmMode + 1) % PWM_MODES;
+        }
         animationFrame = 0;
       }
       modeChangeDisabled = false;
@@ -267,7 +283,21 @@ void sleep() {
 
 
 void updateLeds() {
-  for (uint8_t i = 0; i < LEDS; i++) {
-    digitalWrite(ledPins[i], leds[i]);
+  if (pwmIndex > pwmModes[currentPwmMode]) {
+    pwmIndex = 0;
+  } else {
+    pwmIndex++;
+  }
+  if (pwmIndex == 0) {
+    for (uint8_t i = 0; i < LEDS; i++) {
+      SET_STATE(ledPinsFast[i], leds[i]);
+      //digitalWrite(ledPins[i], leds[i]);
+    }
+
+  } else {
+    for (uint8_t i = 0; i < LEDS; i++) {
+      SET_STATE_LOW(ledPinsFast[i]);
+      //digitalWrite(ledPins[i], false);
+    }
   }
 }
