@@ -1,9 +1,12 @@
 /**
  * Code for RSC DRONE BADGE
  * MCU: ATTINY25 @ 8 MHz
- * Using: ATTinyCore
+ * Using: Arduino + ATTinyCore
+ * Author: Vaclav M (github.com/xx0x)
+ * Licence: MIT
  *
- * UGLY CODE, SORRY :((
+ * Ugly code, sorry, I wrote in a hurry and didn't have time to clean it :(
+ * But it works :)
  */
 
 #include <avr/interrupt.h>
