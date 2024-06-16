@@ -2,7 +2,7 @@
 
 <img src="./rsc-drone-badge.jpg" width="300">
 
-A badge (pendant) in the shape of FPV drone which I made for my friends at [Resistance Support Club](http://resistance.support). The collective organizes soldering workshops, the collected money goes to Ukrainian defenders.
+A badge (pendant) in the shape of FPV drone which I designed for my friends at [Resistance Support Club](http://resistance.support). The collective organizes soldering workshops, the collected money goes to Ukrainian defenders.
 
 Custom designed PCB in Eagle, you can find both design files and gerber archive in the `code` subfolder. You can easily download the ZIP file with gerber and order the PCBs at your favorite PCB manufacturer. Recommended options are: Blue soldermask, ENIG surface.
 
