@@ -1635,7 +1635,7 @@ BH-25F-1</description>
 </class>
 </classes>
 <parts>
-<part name="IC1" library="BASTL_ICS" library_urn="urn:adsk.eagle:library:32977748" deviceset="ATTINY85" device="-20PU" package3d_urn="urn:adsk.eagle:package:43822317/1" value="ATTINY85"/>
+<part name="IC1" library="BASTL_ICS" library_urn="urn:adsk.eagle:library:32977748" deviceset="ATTINY85" device="-20PU" package3d_urn="urn:adsk.eagle:package:43822317/1" value="ATTINY"/>
 <part name="S1" library="BASTL_SWITCHES" library_urn="urn:adsk.eagle:library:32903743" deviceset="PUSH_MOMENTARY" device="_THT_6X6MM" package3d_urn="urn:adsk.eagle:package:32903802/2" value="6x6mm BUTTON"/>
 <part name="GND1" library="BASTL_SYMBOLS" library_urn="urn:adsk.eagle:library:32975873" deviceset="GND" device=""/>
 <part name="Q1" library="BASTL_TRANZISTORS" library_urn="urn:adsk.eagle:library:32975847" deviceset="BC547" device="" package3d_urn="urn:adsk.eagle:package:43822007/4"/>
