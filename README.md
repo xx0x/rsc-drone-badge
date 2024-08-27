@@ -71,7 +71,7 @@ A badge (pendant) in the shape of FPV drone which I designed for my friends at [
     </tr>
 </table>
 
-Then you just need a regular CR2032 battery and ideally a 2mm nylon string from your local hardware store.
+Then you just need a regular CR2032 battery and a 2 mm polypropylen, nylon or other string from your local store.
 
 ## Description
 
