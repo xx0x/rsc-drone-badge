@@ -84,6 +84,10 @@ In `drawing` subfolder you can find board drawings in Adobe Illustrator format a
 Слава Україні! 🇺🇦
 
 
+## Mini Variant
+
+The directories also contain a simplified variant, smaller with 4 LEDs.
+
 ## License
 
 MIT, feel free to share!

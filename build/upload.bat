@@ -5,12 +5,22 @@ set /p MCU_SUFFIX=Which ATTINY to use (25/85)?
 
 if "%MCU_SUFFIX%"=="25" (
     set MCU=attiny25
-    set BIN_FILE=RscDroneBadge_attiny25.hex
 ) else if "%MCU_SUFFIX%"=="85" (
     set MCU=attiny85
-    set BIN_FILE=RscDroneBadge_attiny85.hex
 ) else (
     echo Invalid ATTINY selected, write 25 or 85. Exiting.
+    exit /b 1
+)
+
+REM Ask for variant (normal or mini)
+set /p VARIANT=Which variant to use (normal/mini)? 
+
+if "%VARIANT%"=="normal" (
+    set BIN_FILE=RscDroneBadge_%MCU%.hex
+) else if "%VARIANT%"=="mini" (
+    set BIN_FILE=RscDroneBadgeMini_%MCU%.hex
+) else (
+    echo Invalid variant selected, write normal or mini. Exiting.
     exit /b 1
 )
 

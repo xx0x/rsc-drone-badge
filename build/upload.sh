@@ -5,12 +5,22 @@ read -p "Which ATTINY to use (25/85)? " MCU_SUFFIX
 
 if [ "$MCU_SUFFIX" == "25" ]; then
     MCU="attiny25"
-    BIN_FILE="RscDroneBadge_attiny25.hex"
 elif [ "$MCU_SUFFIX" == "85" ]; then
     MCU="attiny85"
-    BIN_FILE="RscDroneBadge_attiny85.hex"
 else
     echo "Invalid ATTINY selected, write 25 or 85. Exiting."
+    exit 1
+fi
+
+# Ask for variant (normal or mini)
+read -p "Which variant to use (normal/mini)? " VARIANT
+
+if [ "$VARIANT" == "normal" ]; then
+    BIN_FILE="RscDroneBadge_${MCU}.hex"
+elif [ "$VARIANT" == "mini" ]; then
+    BIN_FILE="RscDroneBadgeMini_${MCU}.hex"
+else
+    echo "Invalid variant selected, write normal or mini. Exiting."
     exit 1
 fi
 
